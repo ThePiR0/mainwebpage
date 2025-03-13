@@ -218,10 +218,10 @@ header {
 /* Background Animation Keyframes */
 @keyframes moveBg {
   from {
-    background-position: 0 0;
+    transform: translate(0, 0);
   }
   to {
-    background-position: 100px 100px; /* Smaller value for a smoother effect */
+    transform: translate(-300px, -300px); /* Adjust movement distance */
   }
 }
 
