@@ -210,7 +210,7 @@ header {
   background: url("code\ \(2\).png") repeat; /* Update with your actual image file */
   background-size: 300px; /* Adjust size to make the image smaller */
   opacity: 0.2; /* Adjust transparency */
-  animation: moveBg 20s linear infinite;
+  animation: moveBg 1000s linear infinite;
   z-index: -1;
 }
 
