@@ -84,7 +84,7 @@ header {
   width: 100%; /* Makes the image responsive */
   max-width: 400px; /* Adjust max size as needed */
   height: auto;
-  border-radius: 10px; /* Optional: Adds rounded corners */
+  border-radius: 12px; /* Optional: Adds rounded corners */
 }
 /* Pink text modifications */
 .content h4,
@@ -201,32 +201,30 @@ header {
 }
 
 /* Moving Background Animation */
-/* Moving Background Animation */
 body::before {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Ensure it fully covers the viewport width */
-    height: 100vh; /* Ensure it fully covers the viewport height */
+    width: 100vw; /* Cover full viewport width */
+    height: 100vh; /* Cover full viewport height */
     background: url("code (2).png") repeat;
-    background-size: 250px 250px; /* Keeps the pattern small */
-    background-position: bottom left; /* Ensures proper alignment */
+    background-size: cover; /* Ensures full coverage */
+    background-position: bottom left; /* Starts from the bottom left */
     opacity: 0.2; /* Slight transparency */
     animation: moveBg 10s linear infinite; /* Smooth looping */
-    z-index: -1;
+    z-index: -2;
 }
 
 /* Background Animation Keyframes */
 @keyframes moveBg {
     from {
-        background-position: 0 100%; /* Starts at the bottom left */
+        background-position: bottom left; /* Starts from bottom left */
     }
     to {
-        background-position: -500px calc(100% + 500px); /* Moves diagonally */
+        background-position: calc(100% + 500px) calc(100% + 500px); /* Moves diagonally */
     }
 }
-
 
 /* Footer Section */
 footer {
