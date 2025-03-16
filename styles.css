@@ -206,10 +206,10 @@ body::before {
     position: fixed;
     top: 0;
     left: 0;
-    width: 50px; /* Cover full viewport width */
-    height: 50px; /* Cover full viewport height */
+    width: 100vw; /* Cover full viewport width */
+    height: 100vh; /* Cover full viewport height */
     background: url("code (2).png") repeat;
-    background-size: cover; /* Ensures full coverage */
+    background-size: 291px 291px; /* Ensures full coverage */
     background-position: bottom left; /* Starts from the bottom left */
     opacity: 0.2; /* Slight transparency */
     animation: moveBg 10s linear infinite; /* Smooth looping */
