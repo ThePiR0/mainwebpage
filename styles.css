@@ -209,19 +209,19 @@ header {
   height: 100%;
   background: url("code (2).png") repeat;
   background-size: 300px; /* Adjust size to make the image smaller */
-  background-attachment: fixed;
+  background-position: top left; /* Ensures it starts from top left */
   opacity: 0.2; /* Adjust transparency */
-  animation: moveBg 10s linear infinite;
   z-index: -1;
+  animation: moveBg 20s linear infinite; /* Extended time for smooth movement */
 }
 
 /* Background Animation Keyframes */
 @keyframes moveBg {
-  from {
-    transform: translate(0, 0);
+  0% {
+    background-position: 0 0;
   }
-  to {
-    transform: translate(-300px, -300px); /* Adjust movement distance */
+  100% {
+    background-position: -600px -600px; /* Adjust movement distance */
   }
 }
 
