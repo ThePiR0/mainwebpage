@@ -210,7 +210,7 @@ header {
   height: 100%;
   background: url("code (2).png") repeat;
   background-size: cover; /* Ensures the image covers the full screen */
-  background-position: top left; /* Starts from the top-left */
+  background-position: bottom left; /* Starts from the top-left */
   opacity: 0.2; /* Adjust transparency */
   z-index: -1;
   animation: moveBg 20s linear infinite;
