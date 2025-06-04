@@ -1,5 +1,11 @@
+/*------------------------------------
+  Import Google Font - Poppins
+------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
+/*------------------------------------
+  Global Reset and Font Setup
+------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +14,16 @@
   color: white; /* Makes all text white */
 }
 
+/*------------------------------------
+  Body Styling - Dark Theme
+------------------------------------*/
 body {
   background-color: black; /* Sets background to black */
 }
 
+/*------------------------------------
+  Header Section - Fixed Top Bar
+------------------------------------*/
 header {
   position: fixed;
   top: 0;
@@ -24,7 +36,9 @@ header {
   z-index: 100;
 }
 
-/* Styles the logo (GIF) */
+/*------------------------------------
+  Logo Image (GIF)
+------------------------------------*/
 .logo {
   position: absolute;
   top: 10px;
@@ -34,7 +48,9 @@ header {
   z-index: 101;
 }
 
-/* Moves navigation to the right side */
+/*------------------------------------
+  Navigation Links
+------------------------------------*/
 .navigation {
   margin-left: auto; /* Pushes the navigation to the right */
 }
@@ -49,9 +65,12 @@ header {
 }
 
 .navigation a:hover {
-  color: rgb(155, 240, 6);
+  color: rgb(155, 240, 6); /* Hover color effect */
 }
 
+/*------------------------------------
+  Home Section Layout
+------------------------------------*/
 .home {
   position: relative;
   width: 100%;
@@ -62,6 +81,9 @@ header {
   padding: 30px 100px;
 }
 
+/*------------------------------------
+  Left-side Content (Text Block)
+------------------------------------*/
 .content {
   max-width: 500px;
 }
@@ -71,9 +93,12 @@ header {
 }
 
 .content h2 span {
-  color: #7d2ae8;
+  color: #7d2ae8; /* Highlighted span text */
 }
 
+/*------------------------------------
+  Right-side Image Block
+------------------------------------*/
 .right-image {
   max-width: 50%;
   display: flex;
@@ -88,17 +113,22 @@ header {
   border-radius: 12px; /* Optional: Adds rounded corners */
 }
 
-/* Pink text modifications */
+/*------------------------------------
+  Buttons & Text Styling
+------------------------------------*/
 .content h4,
 .btn-group a:first-child,
 .btn-group a:nth-child(2) {
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255); /* White text for headers and first two buttons */
 }
 
 .content p {
-  padding: 10px 0 40px 0;
+  padding: 10px 0 40px 0; /* Spacing around paragraph */
 }
 
+/*------------------------------------
+  Button Group Styling
+------------------------------------*/
 .btn-group a {
   border: 2px solid blue;
   text-decoration: none;
@@ -111,9 +141,12 @@ header {
 
 .btn-group a:hover {
   color: white;
-  background: rgb(43, 17, 188);
+  background: rgb(43, 17, 188); /* Hover background */
 }
 
+/*------------------------------------
+  Social Media Icons Styling
+------------------------------------*/
 .social-icons {
   position: absolute;
   bottom: 50px;
@@ -134,14 +167,16 @@ header {
 }
 
 .social-icons a:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Slight lift on hover */
 }
 
 .social-icons a i {
-  color: #fff;
+  color: #fff; /* Icon color */
 }
 
-/* Preloader Styles */
+/*------------------------------------
+  Preloader Styles (Loader Screen)
+------------------------------------*/
 #preloader {
   position: fixed;
   top: 0;
@@ -161,26 +196,34 @@ header {
   height: auto;
 }
 
-/* Main Content - Initially Hidden */
+/*------------------------------------
+  Main Content (Hidden initially)
+------------------------------------*/
 #main-content {
   opacity: 0;
-  animation: fadeInMain 3s forwards 7s; /* Fades in from 7s to 10s */
+  animation: fadeInMain 3s forwards 7s; /* Fades in after preloader ends */
 }
 
-/* Preloader fades out from 5s to 7s */
+/*------------------------------------
+  Preloader Fade-Out Animation
+------------------------------------*/
 @keyframes fadeOutPreloader {
   0% { opacity: 1; }
-  71.4% { opacity: 1; } /* Logo fully visible till 5s */
-  100% { opacity: 0; visibility: hidden; } /* Fades out from 5s to 7s */
+  71.4% { opacity: 1; } /* Visible until 5s */
+  100% { opacity: 0; visibility: hidden; } /* Fades out by 7s */
 }
 
-/* Main content fades in from 7s to 10s */
+/*------------------------------------
+  Main Content Fade-In Animation
+------------------------------------*/
 @keyframes fadeInMain {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
-/* Typing Animation */
+/*------------------------------------
+  Typing Effect Container
+------------------------------------*/
 .typing-container {
   display: inline-block;
   white-space: nowrap;
@@ -188,48 +231,52 @@ header {
   border-right: 3px solid white; /* Cursor effect */
   font-size: 3em;
   animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
-  width: fit-content; /* Ensures full text is shown */
-  max-width: 0; /* Start with no width */
+  width: fit-content;
+  max-width: 0; /* Starts hidden */
 }
 
-/* Typing Effect */
+/* Typing Text Animation */
 @keyframes typing {
   from { max-width: 0; }
   to { max-width: 100%; }
 }
 
-/* Blinking Cursor Effect */
+/* Blinking Cursor Animation */
 @keyframes blink {
   50% { border-color: transparent; }
 }
 
-/* Moving Background Animation */
+/*------------------------------------
+  Animated Background Pattern
+------------------------------------*/
 body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* Cover full viewport width */
-  height: 100vh; /* Cover full viewport height */
+  width: 100vw;
+  height: 100vh;
   background: url("code (2).png") repeat;
-  background-size: 291px 291px; /* Ensures full coverage */
-  background-position: bottom left; /* Starts from the bottom left */
-  opacity: 0.2; /* Slight transparency */
-  animation: moveBg 10s linear infinite; /* Smooth looping */
+  background-size: 291px 291px;
+  background-position: bottom left;
+  opacity: 0.2;
+  animation: moveBg 10s linear infinite;
   z-index: -2;
 }
 
-/* Background Animation Keyframes */
+/* Background Movement Animation */
 @keyframes moveBg {
   from {
-    background-position: bottom left; /* Starts from bottom left */
+    background-position: bottom left;
   }
   to {
     background-position: calc(100% + 500px) calc(100% + 500px); /* Moves diagonally */
   }
 }
 
-/* Changing Text Animation */
+/*------------------------------------
+  Dynamic Changing Text Effect
+------------------------------------*/
 @keyframes changeText {
   0%, 100% {
     content: "Coder";
@@ -252,7 +299,9 @@ body::before {
   font-weight: bold;
 }
 
-/* Footer Section */
+/*------------------------------------
+  Footer Section Styling
+------------------------------------*/
 footer {
   position: fixed;
   bottom: 10px;
@@ -260,5 +309,5 @@ footer {
   text-align: center;
   font-size: 1em;
   color: rgba(242, 255, 0, 0.999);
-  text-shadow: 0 0 10px white, 0 0 20px white; /* Glowing effect */
+  text-shadow: 0 0 10px white, 0 0 20px white; /* Glowing text effect */
 }
