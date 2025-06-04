@@ -1,11 +1,15 @@
-/* Hide the logo on smaller screens */
+/*------------------------------------
+  Hide the Logo on Smaller Screens
+------------------------------------*/
 @media screen and (max-width: 1024px) {
     .logo {
-        display: none;
+        display: none; /* Hides logo on tablets/mobiles */
     }
 }
 
-/* Ensure the image appears at the bottom on small screens */
+/*------------------------------------
+  Responsive Behavior for Container and Image
+------------------------------------*/
 @media screen and (max-width: 1024px) {
     .container {
         display: flex;
@@ -13,20 +17,21 @@
         align-items: center;
         overflow: auto;
         position: relative;
-        min-height: 100vh;
+        min-height: 100vh; /* Ensures full vertical height */
     }
 
     .content {
-        padding-bottom: 100px; /* Ensure space at the bottom */
+        padding-bottom: 100px; /* Leaves room at the bottom for image */
     }
 
-    /* Wrapper to trigger sticky effect */
+    /* Wrapper acts as trigger for sticky image effect */
     .image-wrapper {
         position: relative;
-        height: 300px; /* Adjust this height based on when you want the image to appear */
+        height: 300px; /* Set height where sticky effect begins */
         width: 100%;
     }
 
+    /* Sticky Image Setup */
     .right-image {
         position: sticky;
         bottom: 20px;
@@ -34,27 +39,34 @@
         transform: translateX(-50%);
         width: 80%;
         z-index: 10;
-        opacity: 0; /* Hidden initially */
-        transition: opacity 0.5s ease-in-out;
+        opacity: 0; /* Start hidden */
+        transition: opacity 0.5s ease-in-out; /* Smooth reveal */
     }
 
-    /* Make the image visible when it reaches the sticky point */
+    /* Show image when in sticky range using `:has()` (modern CSS feature) */
     .image-wrapper:has(.right-image) .right-image {
         opacity: 1;
     }
 }
 
-/* Hide scrollbar while allowing scrolling */
+/*------------------------------------
+  Scrollbar Visibility Control
+------------------------------------*/
+/* Allow vertical scrolling but hide scrollbar */
 body {
     overflow-y: auto;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
 }
 
 body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none; /* Hides scrollbar in Chrome/Safari/Edge */
 }
 
-/* Menu Toggle Fix */
+/*------------------------------------
+  Responsive Hamburger Menu Setup
+------------------------------------*/
+
+/* Hidden input toggle for menu */
 #menu-toggle {
     display: none;
     position: absolute;
@@ -63,6 +75,7 @@ body::-webkit-scrollbar {
     z-index: -1;
 }
 
+/* Hamburger icon (initially hidden) */
 .menu-icon {
     display: none;
     font-size: 24px;
@@ -74,13 +87,14 @@ body::-webkit-scrollbar {
     z-index: 100;
 }
 
+/* Show hamburger menu and hide regular nav on small screens */
 @media screen and (max-width: 1024px) {
     .menu-icon {
-        display: block;
+        display: block; /* Show hamburger */
     }
 
     .navigation {
-        display: none;
+        display: none; /* Hide normal nav */
         flex-direction: column;
         background: black;
         position: absolute;
@@ -92,9 +106,10 @@ body::-webkit-scrollbar {
     }
 
     .navigation a {
-        padding: 10px;
+        padding: 10px; /* Add spacing inside dropdown */
     }
 
+    /* Show nav menu when checkbox is checked */
     #menu-toggle:checked ~ .navigation {
         display: flex;
     }
